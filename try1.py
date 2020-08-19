@@ -15,15 +15,18 @@ for doc in db.noticias.find().sort("Fecha",-1):
         
         total.append("\n".join(str(x) for x in doc.values()))
 
-total="\n\n".join(total)
+if not total:
+    pass
+else:
+    total="\n\n".join(total)
 
-s=smtplib.SMTP("smtp.zoho.com",587)
-msg=MIMEText(total)
-sender="noticiasls@zohomail.com"
-recipients="dsilva2401@gmail.com"
-msg["Subject"]="Noticias"
-msg["From"]=sender
-msg["To"]=recipients
-s.starttls()
-s.login("noticiasls@zohomail.com","16287664")
-s.sendmail(sender,recipients,msg.as_string())
+    s=smtplib.SMTP("smtp.zoho.com",587)
+    msg=MIMEText(total)
+    sender="noticiasls@zohomail.com"
+    recipients="dsilva2401@gmail.com"
+    msg["Subject"]="Noticias"
+    msg["From"]=sender
+    msg["To"]=recipients
+    s.starttls()
+    s.login("noticiasls@zohomail.com","16287664")
+    s.sendmail(sender,recipients,msg.as_string())
