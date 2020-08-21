@@ -15,12 +15,12 @@ for doc in db.noticias.find().sort("Fecha",-1):
         
         total.append("\n".join(str(x) for x in doc.values()))
 
-
+total="\n\n".join(total)
 
 if not total:
     pass
 else:
-    total="\n\n".join(total)
+    
 
     s=smtplib.SMTP("smtp.zoho.com",587)
     msg=MIMEText(total)
