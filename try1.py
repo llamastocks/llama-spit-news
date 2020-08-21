@@ -15,6 +15,8 @@ for doc in db.noticias.find().sort("Fecha",-1):
         
         total.append("\n".join(str(x) for x in doc.values()))
 
+print(total)
+
 if not total:
     pass
 else:

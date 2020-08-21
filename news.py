@@ -31,4 +31,4 @@ for link in links:
     result=db.noticias.update(articulo,articulo,upsert=True)
     
     
-#hola die como estas
+
