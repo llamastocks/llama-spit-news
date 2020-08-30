@@ -5,21 +5,24 @@ from bs4 import BeautifulSoup
 from newspaper import Article
 from pymongo import MongoClient
 
-sections=["economia","politica","mundo"]
+
+sections=[("finance","Finance"),("finance/markets","Markets"),("politics","Politics"),("finance/deals","Deals"),("news/world","World News"),("breakingviews","Breaking Views")]
 for section in sections:
-    url="https://elcomercio.pe/"+section
+    url="https://www.reuters.com/"+section[0]
     contenido=requests.get(url, verify=False).text
 
     soup=BeautifulSoup(contenido,"html.parser")
-    p=soup.find_all("div",{"class":"story-item__wrapper-item w-full"})
+    p=soup.find_all("div",{"class":"story-content"})
+
     links=[]
     for a in p:
-        for b in a.find_all("a",{"class":"story-item__title block overflow-hidden primary-font line-h-xs mt-10"}):
+        for b in a.find_all("a"):
             links.append(b.get("href"))
 
+
     for link in links:
-        url="https://elcomercio.pe"+link
-        article=Article(url,language="es")
+        url="https://www.reuters.com"+link
+        article=Article(url,language="en")
         article.download()
         article.parse()
         article.nlp()
@@ -31,13 +34,14 @@ for section in sections:
         "URL":article.url,
         "Article":article.text,
         "Keywords":"Palabras clave: "+key,
-        "Section":section
-        "Source":"El Comercio"
+        "Section":section[1],
+        "Source":"Reuters"
         }
         
         client=MongoClient("mongodb+srv://root_bobsburguers:yoQnE9BsxD8YqpqL@bobsburguerscluster-z0q0x.mongodb.net/test?retryWrites=true&w=majority")
-        db=client.elcomercio_economia
+        db=client.reuters
         result=db.noticias.update(articulo,articulo,upsert=True)
         
-    print("Se han actualizado las noticias de sección "+section)    
+    print("Se han actualizado las noticias de sección "+section[1])   
 
+    
