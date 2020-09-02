@@ -16,7 +16,7 @@ for doc in db.news.find().sort("Fecha",-1):
         total.append("\n".join(str(x) for x in doc.values()))
 
 total="\n\n".join(total)
-
+print(total)
 if not total:
     pass
 else:
