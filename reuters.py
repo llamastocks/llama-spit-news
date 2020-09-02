@@ -39,8 +39,8 @@ for section in sections:
         }
         
         client=MongoClient("mongodb+srv://root_bobsburguers:yoQnE9BsxD8YqpqL@bobsburguerscluster-z0q0x.mongodb.net/test?retryWrites=true&w=majority")
-        db=client.reuters
-        result=db.noticias.update(articulo,articulo,upsert=True)
+        db=client.llamastocks
+        result=db.news.update(articulo,articulo,upsert=True)
         
     print("Se han actualizado las noticias de sección "+section[1])   
 
