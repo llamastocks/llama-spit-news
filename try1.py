@@ -9,7 +9,7 @@ db=client.elcomercio_economia
 
 total=[]
 for doc in db.noticias.find().sort("Fecha",-1):
-    if doc["Fecha"]>=datetime.datetime.now()+datetime.timedelta(hours=5,minutes=-60):
+    if doc["Fecha"]>=datetime.datetime.now()+datetime.timedelta(hours=5,minutes=-180):
         del doc["_id"]
         doc["Fecha"]=doc["Fecha"]+datetime.timedelta(hours=-5)
         
@@ -24,11 +24,12 @@ else:
 
     s=smtplib.SMTP("smtp.zoho.com",587)
     msg=MIMEText(total)
-    sender="noticiasls@zohomail.com"
-    recipients="noticiasls@zohomail.com"
+    sender="llamastocks@zohomail.com"
+    recipients="llamastocks@zohomail.com"
     msg["Subject"]="Noticias"
     msg["From"]=sender
     msg["To"]=recipients
     s.starttls()
-    s.login("noticiasls@zohomail.com","16287664")
+    s.login("llamastocks@zohomail.com","mauricio96Silva")
     s.sendmail(sender,recipients,msg.as_string())
+    

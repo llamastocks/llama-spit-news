@@ -31,7 +31,7 @@ for section in sections:
         "URL":article.url,
         "Article":article.text,
         "Keywords":"Palabras clave: "+key,
-        "Section":section
+        "Section":section,
         "Source":"El Comercio"
         }
         
