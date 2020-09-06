@@ -16,7 +16,7 @@ for doc in db.news.find().sort("Fecha",-1):
         total.append("\n".join(str(x) for x in doc.values()))
 
 total="\n\n".join(total)
-print(total)
+
 if not total:
     pass
 else:
@@ -25,7 +25,7 @@ else:
     s=smtplib.SMTP("smtp.zoho.com",587)
     msg=MIMEText(total)
     sender="llamastocks@zohomail.com"
-    recipients="daniela.delcarpiosilva@gmail.com"
+    recipients="llamastocks@zohomail.com"#"daniela.delcarpiosilva@gmail.com"
     msg["Subject"]="Noticias"
     msg["From"]=sender
     msg["To"]=recipients

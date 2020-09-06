@@ -3,21 +3,35 @@ import requests
 from bs4 import BeautifulSoup
 from newspaper import Article
 from pymongo import MongoClient
+import datetime
+import smtplib
+from email.mime.text import MIMEText
 
-url="https://elcomercio.pe/politica/congreso-el-fin-de-la-votacion-a-traves-de-portavoces-tras-el-pronunciamiento-del-tc-noticia/"
+url="https://elcomercio.pe/tvmas/television/comicos-ambulantes-los-ambulantes-de-la-risa-el-sueldo-de-los-comicos-la-indisciplina-y-mas-secretos-del-polemico-programa-secretos-de-la-tv-tripita-cachay-panamericana-television-efrain-aguilar-noticia/"
 
 
 article=Article(url,language="es")
 article.download()
 article.parse()
 article.nlp()
-articulo={
-"Titulo":article.title,
-"Fecha":article.publish_date,
-"URL":article.url,
-"Article":article.text,
-"Keywords":article.keywords
-}
-client=MongoClient("mongodb+srv://root_bobsburguers:yoQnE9BsxD8YqpqL@bobsburguerscluster-z0q0x.mongodb.net/test?retryWrites=true&w=majority")
-db=client.elcomercio_economia
-result=db.noticias.update(articulo,articulo,upsert=True)
+
+articulo=[
+article.title,
+article.publish_date,
+article.url,
+article.text,
+
+]
+total=[]
+total.append("\n\n".join(str(x) for x in articulo))
+
+s=smtplib.SMTP("smtp.zoho.com",587)
+msg=MIMEText(total)
+sender="llamastocks@zohomail.com"
+recipients="cwhcorreo@gmail.com"
+msg["Subject"]=articulo[0]
+msg["From"]=sender
+msg["To"]=recipients
+s.starttls()
+s.login("llamastocks@zohomail.com","mauricio96Silva")
+s.sendmail(sender,recipients,msg.as_string())
