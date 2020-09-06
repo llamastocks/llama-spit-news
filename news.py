@@ -5,9 +5,9 @@ from bs4 import BeautifulSoup
 from newspaper import Article
 from pymongo import MongoClient
 
-sections=["economia","politica","mundo"]
+sections=[("economia","Economia"),("politica","Politica"),("mundo","Mundo")]
 for section in sections:
-    url="https://elcomercio.pe/"+section
+    url="https://elcomercio.pe/"+section[0]
     contenido=requests.get(url, verify=False).text
 
     soup=BeautifulSoup(contenido,"html.parser")
@@ -31,7 +31,7 @@ for section in sections:
         "URL":article.url,
         "Article":article.text,
         "Keywords":"Palabras clave: "+key,
-        "Section":section,
+        "Section":section[1],
         "Source":"El Comercio"
         }
         
@@ -39,5 +39,5 @@ for section in sections:
         db=client.llamastocks
         result=db.news.update({"Titulo":articulo["Titulo"],"Fecha":articulo["Fecha"]},articulo,upsert=True)
         
-    print("Se han actualizado las noticias de sección "+section)    
+    print("Se han actualizado las noticias de sección "+section[1])    
 
