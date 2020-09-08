@@ -1,4 +1,5 @@
 import newspaper
+import re
 import requests
 import imaplib
 import email
@@ -33,34 +34,36 @@ for num in messages[0].split():
                     links.append(body)
             typ,data=imap.store(num,"+FLAGS","\\Seen")        
 
-print(links)
+
+url=re.search("(?P<url>https?://[^\s]+)",links[0]).group("url")
             
 
 
-#url="https://elcomercio.pe/politica/gobierno/un-shock-de-verdad-una-cronica-de-fernando-vivas-juan-carlos-hurtado-miller-alberto-fujimori-javier-perez-de-cuellar-mario-vargas-llosa-noticia/"
+if links is not None:
 
+    article=Article(url,language="es")
+    article.download()
+    article.parse()
+    article.nlp()
 
-#article=Article(url,language="es")
-#article.download()
-#article.parse()
-#article.nlp()
+    articulo=[
+    article.title,
+    article.url,
+    article.text,
 
-#articulo=[
-#article.title,
-#article.url,
-#article.text,
-
-#]
-#total=[]
-#total.append("\n\n".join(str(x) for x in articulo))
-#total="\n\n".join(links)
-#s=smtplib.SMTP("smtp.zoho.com",587)
-#msg=MIMEText(total)
-#sender="llamastocks@zohomail.com"
-#recipients="cwhcorreo@gmail.com"
-#msg["Subject"]="Respuesta"
-#msg["From"]=sender
-#msg["To"]=recipients
-#s.starttls()
-#s.login("llamastocks@zohomail.com","mauricio96Silva")
-#s.sendmail(sender,recipients,msg.as_string())
+    ]
+    total=[]
+    total.append("\n\n".join(str(x) for x in articulo))
+    total="\n\n".join(total)
+    s=smtplib.SMTP("smtp.zoho.com",587)
+    msg=MIMEText(total)
+    sender="llamastocks@zohomail.com"
+    recipients="cwhcorreo@gmail.com"
+    msg["Subject"]="Respuesta"
+    msg["From"]=sender
+    msg["To"]=recipients
+    s.starttls()
+    s.login("llamastocks@zohomail.com","mauricio96Silva")
+    s.sendmail(sender,recipients,msg.as_string())
+else:
+    pass
