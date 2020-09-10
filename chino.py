@@ -34,12 +34,12 @@ for num in messages[0].split():
                     links.append(body)
             typ,data=imap.store(num,"+FLAGS","\\Seen")        
 
-
-url=re.search("(?P<url>https?://[^\s]+)",links[0]).group("url")
+if links is not None:
+    url=re.search("(?P<url>https?://[^\s]+)",links[0]).group("url")
             
 
 
-if links is not None:
+
 
     article=Article(url,language="es")
     article.download()
