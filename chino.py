@@ -19,7 +19,7 @@ imap=imaplib.IMAP4_SSL("imap.zoho.com")
 imap.select("INBOX")
 
 (retcode,messages)=imap.search(None,"(SUBJECT SPIT UNSEEN)")
-
+print(messages)
 links=[]
 n=0
 for num in messages[0].split():
@@ -33,7 +33,7 @@ for num in messages[0].split():
                     body=part.get_payload(decode=True).decode("utf-8")
                     links.append(body)
             typ,data=imap.store(num,"+FLAGS","\\Seen")        
-
+print(links)
 if links is not None:
     url=re.search("(?P<url>https?://[^\s]+)",links[0]).group("url")
             

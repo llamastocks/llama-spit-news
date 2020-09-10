@@ -25,11 +25,11 @@ else:
     s=smtplib.SMTP("smtp.zoho.com",587)
     msg=MIMEText(total)
     sender="llamastocks@zohomail.com"
-    recipients=["daniela.delcarpiosilva@gmail.com"]
+    recipients=["daniela.delcarpiosilva@gmail.com","alonsotakamure@hotmail.com"]
     msg["Subject"]="Noticias"
     msg["From"]=sender
-    msg["To"]=", ".join(recipients)
+    msg["To"]=sender
     s.starttls()
     s.login("llamastocks@zohomail.com","mauricio96Silva")
-    s.sendmail(sender,recipients,msg.as_string())
+    s.sendmail(sender,[sender]+recipients,msg.as_string())
     
