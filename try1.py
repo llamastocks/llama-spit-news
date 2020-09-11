@@ -9,7 +9,7 @@ db=client.llamastocks
 
 total=[]
 for doc in db.news.find().sort("Fecha",-1):
-    if doc["Fecha"]>=datetime.datetime.now()+datetime.timedelta(hours=5,minutes=-180):
+    if (doc["Fecha"]>=datetime.datetime.now()+datetime.timedelta(hours=5,minutes=-180) and doc["Fecha"] is not None):
         del doc["_id"],doc["Article"]
         doc["Fecha"]=doc["Fecha"]+datetime.timedelta(hours=-5)
         
