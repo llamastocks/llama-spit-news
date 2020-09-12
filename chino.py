@@ -66,7 +66,7 @@ if matrix is not None:
             msg=MIMEText(total)
             sender="llamastocks@zohomail.com"
             recipients=tuples[0]
-            msg["Subject"]="Respuesta"
+            msg["Subject"]="Respuesta: "+article.title
             msg["From"]=sender
             msg["To"]=recipients
             s.starttls()
