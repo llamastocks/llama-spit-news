@@ -12,8 +12,8 @@ for doc in db.news.find().sort("Fecha",-1):
     if (doc["Fecha"]>=datetime.datetime.now()+datetime.timedelta(hours=5,minutes=-180) and doc["Fecha"] is not None):
         del doc["_id"],doc["Article"]
         doc["Fecha"]=doc["Fecha"]+datetime.timedelta(hours=-5)
-        
-        total.append("\n".join(str(x) for x in doc.values()))
+        temp=["<br><table><tr><th><a href="+doc["URL"]+">"+doc["Titulo"]+"</a></th></tr>","<tr><td>Fuente: "+doc["Section"]+" - "+doc["Source"]+"</td></tr>","<tr><td>"+str(doc["Fecha"])+"</td></tr></table></br>"]
+        total.append("\n".join(str(x) for x in temp))
 
 total="\n\n".join(total)
 
@@ -23,9 +23,9 @@ else:
     
 
     s=smtplib.SMTP("smtp.zoho.com",587)
-    msg=MIMEText(total)
+    msg=MIMEText(total,"html")
     sender="llamastocks@zohomail.com"
-    recipients=["daniela.delcarpiosilva@gmail.com","alonsotakamure@hotmail.com"]
+    recipients=["llamastocks@zohomail.com"]#"daniela.delcarpiosilva@gmail.com","alonsotakamure@hotmail.com"]
     msg["Subject"]="Noticias"
     msg["From"]=sender
     msg["To"]=sender
