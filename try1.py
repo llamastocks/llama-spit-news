@@ -7,7 +7,7 @@ client=MongoClient("mongodb+srv://root_bobsburguers:yoQnE9BsxD8YqpqL@bobsburguer
 db=client.llamastocks
 
 
-total=[]
+total=["Noticias últimas 3 horas\n\n"]
 for doc in db.news.find().sort("Fecha",-1):
     if (doc["Fecha"]>=datetime.datetime.now()+datetime.timedelta(hours=5,minutes=-180) and doc["Fecha"] is not None):
         del doc["_id"],doc["Article"]
@@ -25,7 +25,7 @@ else:
     s=smtplib.SMTP("smtp.zoho.com",587)
     msg=MIMEText(total,"html")
     sender="llamastocks@zohomail.com"
-    recipients=["daniela.delcarpiosilva@gmail.com","alonsotakamure@hotmail.com"]
+    recipients=["daniela.delcarpiosilva@gmail.com","alonsotakamure@hotmail.com","victorcastromonte2013@gmail.com"]
     msg["Subject"]="Noticias"
     msg["From"]=sender
     msg["To"]=sender
