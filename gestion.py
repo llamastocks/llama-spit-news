@@ -35,7 +35,7 @@ for section in sections:
         "Article":article.text,
         "Keywords":"Palabras clave: "+key,
         "Section":section[1],
-        "Source":"Reuters"
+        "Source":"Gestion"
         }
         
         client=MongoClient("mongodb+srv://root_bobsburguers:yoQnE9BsxD8YqpqL@bobsburguerscluster-z0q0x.mongodb.net/test?retryWrites=true&w=majority")
