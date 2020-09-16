@@ -1,6 +1,7 @@
 import newspaper
 import requests
 import nltk
+import datetime
 from bs4 import BeautifulSoup
 from newspaper import Article
 from pymongo import MongoClient
@@ -27,10 +28,12 @@ for section in sections:
         article.parse()
         article.nlp()
         key=", ".join(article.keywords)
+        
+        
 
         articulo={
         "Titulo":article.title,
-        "Fecha":article.publish_date,
+        "Fecha":(article.publish_date).replace(microsecond=0),
         "URL":article.url,
         "Article":article.text,
         "Keywords":"Palabras clave: "+key,
