@@ -11,12 +11,13 @@ def list_bvl():
     p=soup.find("select",{"class":"form-control"})
 
     bvl=[]
-
+    x=0
     for option in p.find_all("option"):
-        bvl.append(option.text)
+        bvl.append((option.text,x))
+        x=x+1
 
     return bvl
 
-
+print(list_bvl())
 #Con la función list_bvl se obtiene la lista
 #de empresas con EEFF en SMV, la lista se llamará bvl

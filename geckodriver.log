@@ -12021,3 +12021,72 @@ JavaScript error: https://www.smv.gob.pe/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8Z
 JavaScript error: https://www.smv.gob.pe/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8ZbLGVu4Rr2gsBo7MvUEnJeZ81, line 1: TypeError: Sys.Res is undefined
 1592014469046	Marionette	INFO	Stopped listening on port 43589
 1592014470829	Marionette	INFO	Stopped listening on port 35165
+1600398182721	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.d5SyJtP5jRAd"
+1600398189232	Marionette	INFO	Listening on port 38627
+1600398189298	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.smv.gob.pe/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8ZbLGVu4Rr2gsBo7MvUEnJeZ81, line 1: TypeError: Sys.Res is undefined
+JavaScript warning: https://www.smv.gob.pe/Frm_InformacionFinanciera?data=A70181B60967D74090DCD93C4920AA1D769614EC12, line 1: unreachable code after return statement
+1600398270194	Marionette	INFO	Stopped listening on port 38627
+1600398272135	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.rXv2amK0dsDR"
+1600398277799	Marionette	INFO	Listening on port 46587
+1600398277871	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.smv.gob.pe/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8ZbLGVu4Rr2gsBo7MvUEnJeZ81, line 1: TypeError: Sys.Res is undefined
+1600398415451	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.MYyJZ0m3Xu6b"
+1600398420746	Marionette	INFO	Listening on port 42123
+1600398420789	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.smv.gob.pe/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8ZbLGVu4Rr2gsBo7MvUEnJeZ81, line 1: TypeError: Sys.Res is undefined
+JavaScript warning: https://www.smv.gob.pe/Frm_InformacionFinanciera?data=A70181B60967D74090DCD93C4920AA1D769614EC12, line 1: unreachable code after return statement
+1600398498365	Marionette	INFO	Stopped listening on port 42123
+1600398500304	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.YIDAgbRbCnZ7"
+1600398505566	Marionette	INFO	Listening on port 39159
+1600398505643	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.smv.gob.pe/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8ZbLGVu4Rr2gsBo7MvUEnJeZ81, line 1: TypeError: Sys.Res is undefined
+JavaScript warning: https://www.smv.gob.pe/Frm_InformacionFinanciera?data=A70181B60967D74090DCD93C4920AA1D769614EC12, line 1: unreachable code after return statement
+1600398585128	Marionette	INFO	Stopped listening on port 39159
+1600398587149	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.iBqFkwmiCtvs"
+1600398592185	Marionette	INFO	Listening on port 36569
+1600398592213	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.smv.gob.pe/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8ZbLGVu4Rr2gsBo7MvUEnJeZ81, line 1: TypeError: Sys.Res is undefined
+JavaScript warning: https://www.smv.gob.pe/Frm_InformacionFinanciera?data=A70181B60967D74090DCD93C4920AA1D769614EC12, line 1: unreachable code after return statement
+1600398666993	Marionette	INFO	Stopped listening on port 36569
+1600398669758	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.7bbpBXCQHuPp"
+1600398675275	Marionette	INFO	Listening on port 36447
+1600398675337	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.smv.gob.pe/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8ZbLGVu4Rr2gsBo7MvUEnJeZ81, line 1: TypeError: Sys.Res is undefined
+JavaScript warning: https://www.smv.gob.pe/Frm_InformacionFinanciera?data=A70181B60967D74090DCD93C4920AA1D769614EC12, line 1: unreachable code after return statement
+1600398751810	Marionette	INFO	Stopped listening on port 36447
+1600398753782	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.4DuuwjXOPorx"
+1600398758697	Marionette	INFO	Listening on port 36313
+1600398758725	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.smv.gob.pe/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8ZbLGVu4Rr2gsBo7MvUEnJeZ81, line 1: TypeError: Sys.Res is undefined
+JavaScript warning: https://www.smv.gob.pe/Frm_InformacionFinanciera?data=A70181B60967D74090DCD93C4920AA1D769614EC12, line 1: unreachable code after return statement
+1600398823338	Marionette	INFO	Stopped listening on port 36313
+1600398825244	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.LFQ2hz9FHVKs"
+1600398830192	Marionette	INFO	Listening on port 36391
+1600398830276	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.smv.gob.pe/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8ZbLGVu4Rr2gsBo7MvUEnJeZ81, line 1: TypeError: Sys.Res is undefined
+JavaScript warning: https://www.smv.gob.pe/Frm_InformacionFinanciera?data=A70181B60967D74090DCD93C4920AA1D769614EC12, line 1: unreachable code after return statement
+1600398906743	Marionette	INFO	Stopped listening on port 36391
+1600398908756	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.1ytWZ58cBEhC"
+1600398914039	Marionette	INFO	Listening on port 36351
+1600398914092	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.smv.gob.pe/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8ZbLGVu4Rr2gsBo7MvUEnJeZ81, line 1: TypeError: Sys.Res is undefined
+JavaScript warning: https://www.smv.gob.pe/Frm_InformacionFinanciera?data=A70181B60967D74090DCD93C4920AA1D769614EC12, line 1: unreachable code after return statement
+1600398986624	Marionette	INFO	Stopped listening on port 36351
+1600398988630	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.YQuG7VONcKQp"
+1600398993961	Marionette	INFO	Listening on port 39413
+1600398993977	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://www.smv.gob.pe/Frm_InformacionFinanciera?data=A70181B60967D74090DCD93C4920AA1D769614EC12, line 1: unreachable code after return statement
+1600399064181	Marionette	INFO	Stopped listening on port 39413
+1600399066075	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.TRl3FfAQOUVf"
+1600399071286	Marionette	INFO	Listening on port 36985
+1600399071369	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.smv.gob.pe/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8ZbLGVu4Rr2gsBo7MvUEnJeZ81, line 1: TypeError: Sys.Res is undefined
+JavaScript warning: https://www.smv.gob.pe/Frm_InformacionFinanciera?data=A70181B60967D74090DCD93C4920AA1D769614EC12, line 1: unreachable code after return statement
+1600399142964	Marionette	INFO	Stopped listening on port 36985
+1600399145085	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.1aQECyozrxqy"
+1600399150273	Marionette	INFO	Listening on port 41099
+1600399150322	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.smv.gob.pe/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8ZbLGVu4Rr2gsBo7MvUEnJeZ81, line 1: TypeError: Sys.Res is undefined
+JavaScript warning: https://www.smv.gob.pe/Frm_InformacionFinanciera?data=A70181B60967D74090DCD93C4920AA1D769614EC12, line 1: unreachable code after return statement
+1600399215579	Marionette	INFO	Stopped listening on port 41099

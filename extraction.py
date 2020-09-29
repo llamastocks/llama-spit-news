@@ -15,7 +15,7 @@ bvl=[]
 for option in p.find_all("option"):
     bvl.append(option.text)
 
-firms=[98,99,100,113,127,131,140,159,168,194,200,108,212,220,222,223,224]
+firms=[114]
 
 
 #Fase 1 Completa: Lista de empresas listadas en BVL extraída
@@ -380,7 +380,7 @@ for firm in firms:
 
                         db=client.business
 
-                        result=db.reviews.insert_one(InfoGeneral)
+                        result=db.reviews.update(InfoGeneral,InfoGeneral,upsert=True)
                         m=m+1
 
                     driver.quit()
