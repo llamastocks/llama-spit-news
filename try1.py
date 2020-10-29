@@ -31,7 +31,8 @@ else:
         "victorcastromonte2013@gmail.com",
         "aguerrerocastaneda@gmail.com",
         "d.peralta.tan@gmail.com",
-        "g.arroyo.lima@gmail.com"]
+        "g.arroyo.lima@gmail.com",
+        "dlopezandres19@gmail.com"]
     msg["Subject"]="Noticias"
     msg["From"]=sender
     msg["To"]=sender
