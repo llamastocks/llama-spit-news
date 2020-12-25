@@ -32,7 +32,7 @@ for num in messages[0].split():
             content=[original["From"]]
             for part in original.walk():
                 if part.get_content_type()=="text/plain":
-                    body=part.get_payload(decode=True).decode("utf-8")
+                    body=part.get_payload(decode=True).decode("ISO-8859-1")
                     body=re.findall("(?P<url>https?://[^\s]+)",body)
                     content.append(body)
             typ,data=imap.store(num,"+FLAGS","\\Seen")
