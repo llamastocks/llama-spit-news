@@ -16,9 +16,9 @@ for items in p:
 
 
 client=MongoClient("mongodb+srv://root_bobsburguers:yoQnE9BsxD8YqpqL@bobsburguerscluster-z0q0x.mongodb.net/test?retryWrites=true&w=majority")
-db=client.llamatest
+db=client.llamastocks
 
 for firm in firms:
-    result=db.price_stock.update({"ticker":firm["ticker"]},firm,upsert=True)
+    result=db.stocks.update({"ticker":firm["ticker"]},firm,upsert=True)
 
 
